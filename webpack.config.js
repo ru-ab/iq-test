@@ -32,6 +32,10 @@ const baseConfig = {
         test: /\.svg$/,
         loader: 'raw-loader',
       },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   resolve: {

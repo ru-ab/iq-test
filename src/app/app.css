@@ -1,5 +1,8 @@
 :root {
   --black: #181818;
+  --white: #ffffff;
+  --yellow: #ffc700;
+  --black-text: #0d0c11;
 }
 
 * {

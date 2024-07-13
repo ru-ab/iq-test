@@ -10,11 +10,11 @@ export class App extends Component {
 
   async init() {
     this.addRoutes();
-    router.navigate('/main');
+    router.navigate('/');
   }
 
   addRoutes() {
-    router.setDefaultRoute('/main');
-    router.addRoute('/main', new MainPage());
+    router.setDefaultRoute('/');
+    router.addRoute('/', new MainPage());
   }
 }
