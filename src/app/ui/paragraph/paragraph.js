@@ -1,9 +1,13 @@
 import { Component } from '../component/component';
 
 export class Paragraph extends Component {
-  constructor({ text = '', classNames }) {
+  constructor({ text = '', html = '', classNames }) {
     super({ tagName: 'p', classNames });
 
-    this.element.textContent = text;
+    if (text) {
+      this.element.textContent = text;
+    } else {
+      this.element.innerHTML = html;
+    }
   }
 }

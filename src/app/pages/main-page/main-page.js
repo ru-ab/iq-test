@@ -2,6 +2,7 @@ import { Header, MoreButton } from '../../components';
 import { Component, Container, Paragraph, Image, Button, Svg } from '../../ui';
 import * as styles from './main-page.module.css';
 import BrainImage from './images/brain.png';
+import BrainSectionsImage from './images/brain-sections.png';
 import QuotationSvg from './icons/quotation-mark.svg';
 
 export class MainPage extends Component {
@@ -16,7 +17,7 @@ export class MainPage extends Component {
           new Paragraph({ text: 'Пройдите точный и быстрый', classNames: [styles.text1] }),
           new Paragraph({ text: 'тест на определение IQ', classNames: [styles.text2] }),
           new Image({ image: BrainImage, classNames: [styles.brain] }),
-          new Button({ text: 'пРойти тест' }),
+          new Button({ text: 'пройти тест' }),
           new Container({
             children: [
               new Paragraph({
@@ -41,6 +42,17 @@ export class MainPage extends Component {
             classNames: [styles.text1],
           }),
           new Svg({ svg: QuotationSvg, classNames: [styles['quotation-end']] }),
+        ],
+      }),
+      new Container({
+        classNames: [styles['white-section']],
+        children: [
+          new Paragraph({
+            html: 'Также по результатам теста\n <strong>ВЫ ПОЛУЧИТЕ</strong> подробные <strong>СОВЕТЫ</strong> по определению наиболее перспективной <strong>ДЛЯ ВАШЕГО ТИПА интеллекта СФЕРЫ ДЕЯТЕЛЬНОСТИ,</strong>\n которая принесет вам скорейший финансовый результат.',
+            classNames: [styles.text1],
+          }),
+          new Image({ image: BrainSectionsImage, classNames: [styles['brain-sections']] }),
+          new Button({ text: 'пройти тест' }),
         ],
       })
     );
