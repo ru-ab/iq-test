@@ -8,7 +8,7 @@
   padding-bottom: 12px;
   height: calc(100vh - 46px);
   min-height: 522px;
-  background: url('../../assets/images/stars-bg.png');
+  background: url('./images/stars-bg.png');
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -78,5 +78,43 @@
     line-height: 10.6px;
     letter-spacing: 0.05em;
     text-align: center;
+  }
+}
+
+.quotation-section {
+  padding-top: 44px;
+  padding-bottom: 32px;
+  min-height: 228px;
+  background: url('./images/flash.png');
+  display: grid;
+  grid-template-columns: 1fr;
+
+  & .quotation-start {
+    padding-left: 24px;
+  }
+
+  & .text1 {
+    margin-top: 13px;
+    padding: 0 26px;
+    white-space: pre-line;
+    color: var(--white);
+    font-family: 'Yeseva One', serif;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    background: radial-gradient(
+      84.34% 50.29% at 48.75% 49.71%,
+      #2950c2 0%,
+      rgba(38, 91, 199, 0.96) 40.62%,
+      rgba(39, 98, 187, 0) 85.42%
+    );
+  }
+
+  & .quotation-end {
+    justify-self: end;
+    margin-top: -11px;
+    padding-left: 28px;
+    transform: rotate(180deg);
   }
 }

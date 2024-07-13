@@ -1,6 +1,6 @@
 import { Component, ButtonIcon } from '../../ui';
 import * as styles from './header.module.css';
-import MenuIcon from '../../assets/icons/menu.svg';
+import MenuIcon from './icons/menu.svg';
 
 export class Header extends Component {
   constructor() {

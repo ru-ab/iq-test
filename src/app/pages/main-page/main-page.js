@@ -1,7 +1,8 @@
 import { Header, MoreButton } from '../../components';
-import { Component, Container, Paragraph, Image, Button } from '../../ui';
+import { Component, Container, Paragraph, Image, Button, Svg } from '../../ui';
 import * as styles from './main-page.module.css';
-import BrainImage from '../../assets/images/brain.png';
+import BrainImage from './images/brain.png';
+import QuotationSvg from './icons/quotation-mark.svg';
 
 export class MainPage extends Component {
   constructor() {
@@ -29,6 +30,17 @@ export class MainPage extends Component {
             ],
           }),
           new MoreButton({ classNames: [styles.more] }),
+        ],
+      }),
+      new Container({
+        classNames: [styles['quotation-section']],
+        children: [
+          new Svg({ svg: QuotationSvg, classNames: [styles['quotation-start']] }),
+          new Paragraph({
+            text: 'Профессиональный\n IQ-тест позволяет не только определить коэффициент вашего интеллекта,\n но и выработать список рекомендаций для повышения этого показателя. ',
+            classNames: [styles.text1],
+          }),
+          new Svg({ svg: QuotationSvg, classNames: [styles['quotation-end']] }),
         ],
       })
     );
