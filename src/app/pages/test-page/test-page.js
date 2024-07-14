@@ -1,4 +1,4 @@
-import { Header, RadioTest } from '../../components';
+import { ColorTest, Header, RadioTest } from '../../components';
 import { Container, Image, Paragraph, ProgressBar } from '../../ui';
 import * as styles from './test-page.module.css';
 import BrainImage from '../../assets/images/brain.png';
@@ -38,12 +38,16 @@ export class TestPage extends Container {
   createTest(test) {
     this.container.removeChildren();
     this.container.append(this.progressBar, this.createTestComponent(test));
+    this.progressBar.setValue(testState.getProgress());
   }
 
   createTestComponent(test) {
     switch (test.type) {
       case 'radio': {
         return new RadioTest({ test });
+      }
+      case 'color': {
+        return new ColorTest({ test });
       }
       default: {
         throw new Error('Unknown test type!');

@@ -13,4 +13,5 @@
   height: 11px;
   z-index: 2;
   background: var(--green);
+  transition: all 0.3s;
 }

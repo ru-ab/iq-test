@@ -22,8 +22,8 @@ class TestState {
     return this.currentTest;
   }
 
-  getTestsCount() {
-    return this.tests.length;
+  getProgress() {
+    return this.currentTest / this.tests.length;
   }
 
   on(eventType, fn) {

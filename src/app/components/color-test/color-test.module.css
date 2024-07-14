@@ -1,0 +1,32 @@
+.color-test {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: stretch;
+  justify-items: center;
+}
+
+.question {
+  white-space: pre-line;
+  margin-bottom: 22px;
+  align-self: flex-end;
+  color: var(--white);
+  font-family: 'PT Serif', serif;
+  font-size: 20px;
+  line-height: 26.5px;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.answers {
+  padding: 0 27px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: start;
+}
+
+.button {
+  justify-self: center;
+  align-self: flex-end;
+  margin-bottom: 25px;
+}
