@@ -3,6 +3,7 @@ import { Component, Container, Paragraph, Image, Button, Svg } from '../../ui';
 import * as styles from './main-page.module.css';
 import BrainImage from './images/brain.png';
 import BrainSectionsImage from './images/brain-sections.png';
+import LightningImage from './images/lightning.png';
 import QuotationSvg from './icons/quotation-mark.svg';
 
 export class MainPage extends Component {
@@ -58,6 +59,8 @@ export class MainPage extends Component {
       new Container({
         classNames: [styles['lightning-section']],
         children: [
+          new Image({ image: LightningImage, classNames: [styles.lightning1] }),
+          new Image({ image: LightningImage, classNames: [styles.lightning2] }),
           new Paragraph({
             html: 'Прохождение теста займет у вас не более <span>12 минут</span>, а его результаты вы сможете <span>использовать всю жизнь.</span>',
             classNames: [styles.text1],
