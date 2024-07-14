@@ -1,0 +1,25 @@
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: var(--white);
+  color: #0d0c11;
+
+  &:has(input:checked) {
+    border: 6px solid var(--yellow);
+  }
+}
+
+.input {
+  appearance: none;
+  outline: none;
+}
+
+.text {
+  font-family: 'PT Serif', serif;
+  font-size: 20px;
+  line-height: 49px;
+  text-align: center;
+}

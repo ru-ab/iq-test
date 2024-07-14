@@ -1,3 +1,7 @@
+import FigureImage from './images/figure.png';
+import GeometryImage from './images/geometry.png';
+import FitNumberImage from './images/fit-number.png';
+
 export const tests = [
   {
     id: 'sex',
@@ -35,6 +39,7 @@ export const tests = [
     id: 'number',
     type: 'radio',
     question: 'Продолжите числовой ряд:\n18  20  24  32',
+    size: 'small',
     answers: [
       { id: '62', label: '62' },
       { id: '48', label: '48' },
@@ -80,6 +85,7 @@ export const tests = [
     id: 'city',
     type: 'radio',
     question: 'Какой из городов лишний?',
+    size: 'small',
     answers: [
       { id: 'Washington', label: 'Вашингтон' },
       { id: 'London', label: 'Лондон' },
@@ -87,6 +93,54 @@ export const tests = [
       { id: 'New York', label: 'Нью-Йорк' },
       { id: 'Moscow', label: 'Москва' },
       { id: 'Ottawa', label: 'Оттава' },
+    ],
+  },
+  {
+    id: 'figure',
+    type: 'button',
+    question: 'Выберите правильную фигуру из четырёх пронумерованных.',
+    image: FigureImage,
+    answers: [
+      { id: '1', label: '1' },
+      { id: '2', label: '2' },
+      { id: '3', label: '3' },
+      { id: '4', label: '4' },
+    ],
+  },
+  {
+    id: 'habit',
+    type: 'radio',
+    question: 'Вам привычнее и важнее:',
+    size: 'large',
+    answers: [
+      { id: '1', label: 'Наслаждаться\nкаждой минутой\n проведенного времени' },
+      { id: '2', label: 'Быть устремленными\nмыслями в будущее' },
+      { id: '3', label: 'Учитывать в ежедневной\nпрактике прошлый опыт' },
+    ],
+  },
+  {
+    id: 'geometry',
+    type: 'radio',
+    question: 'Какое определение, по-Вашему, больше подходит к этому геометрическому изображению:',
+    image: GeometryImage,
+    answers: [
+      { id: '1', label: 'Оно остроконечное' },
+      { id: '2', label: 'Оно устойчиво' },
+      { id: '3', label: 'Оно-находится в состоянии равновесия' },
+    ],
+  },
+  {
+    id: 'fit-number',
+    type: 'button',
+    question: 'Вставьте подходящее число',
+    image: FitNumberImage,
+    answers: [
+      { id: '34', label: '34' },
+      { id: '36', label: '36' },
+      { id: '53', label: '53' },
+      { id: '55', label: '44' },
+      { id: '66', label: '66' },
+      { id: '42', label: '42' },
     ],
   },
 ];

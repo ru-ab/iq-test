@@ -1,10 +1,10 @@
 import { testState } from '../../state/test.state';
-import { Button, Container, Image, Paragraph, Radio } from '../../ui';
-import * as styles from './radio-test.module.css';
+import { Button, ButtonSelect, Container, Image, Paragraph } from '../../ui';
+import * as styles from './button-test.module.css';
 
-export class RadioTest extends Container {
+export class ButtonTest extends Container {
   constructor({ test }) {
-    super({ classNames: [styles['radio-test']] });
+    super({ classNames: [styles.test] });
 
     let selectedAnswer;
 
@@ -15,12 +15,11 @@ export class RadioTest extends Container {
       classNames: [styles.button],
     });
 
-    const radios = test.answers.map(
+    const buttons = test.answers.map(
       (answer) =>
-        new Radio({
+        new ButtonSelect({
           label: answer.label,
           name: test.id,
-          size: test.size ? test.size : null,
           onClick: () => {
             selectedAnswer = answer;
             nextButton.setDisabled(false);
@@ -30,10 +29,8 @@ export class RadioTest extends Container {
 
     this.append(
       new Paragraph({ text: test.question, classNames: [styles.question] }),
-      ...(test.image
-        ? [new Image({ image: test.image, classNames: [styles.image] })]
-        : [new Container({ classNames: [styles.empty] })]),
-      new Container({ classNames: [styles.answers], children: radios }),
+      new Image({ image: test.image }),
+      new Container({ classNames: [styles.answers], children: buttons }),
       nextButton
     );
   }

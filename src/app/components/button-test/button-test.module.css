@@ -1,38 +1,29 @@
-.radio-test {
+.test {
   display: grid;
   grid-template-columns: 1fr;
   align-content: stretch;
+  justify-items: center;
 }
 
 .question {
   white-space: pre-line;
-  margin-bottom: 4px;
+  margin-bottom: 24px;
   align-self: flex-end;
   color: var(--white);
   font-family: 'PT Serif', serif;
   font-size: 18px;
-  line-height: 26.5px;
+  line-height: 23.85px;
   letter-spacing: 0.05em;
   text-align: center;
 }
 
 .answers {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   gap: 8px;
-  align-content: start;
 }
 
 .button {
   justify-self: center;
   align-self: flex-end;
   margin-bottom: 25px;
-}
-
-.image {
-  justify-self: center;
-}
-
-.empty {
-  height: 20px;
 }

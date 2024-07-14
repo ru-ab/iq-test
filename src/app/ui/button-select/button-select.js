@@ -1,8 +1,8 @@
 import { Component } from '../component/component';
-import * as styles from './radio.module.css';
+import * as styles from './button-select.module.css';
 
-export class Radio extends Component {
-  constructor({ name, label, onClick, size, classNames = [] }) {
+export class ButtonSelect extends Component {
+  constructor({ name, label, onClick, classNames = [] }) {
     super({ tagName: 'label', classNames: [styles.label, ...classNames] });
 
     const uuid = crypto.randomUUID();
@@ -18,10 +18,6 @@ export class Radio extends Component {
 
     if (onClick) {
       this.element.addEventListener('click', onClick);
-    }
-
-    if (size) {
-      this.addClassNames([styles[size]]);
     }
 
     this.append(inputComponent, spanComponent);

@@ -1,4 +1,4 @@
-import { ColorTest, Header, RadioTest } from '../../components';
+import { ButtonTest, ColorTest, Header, RadioTest } from '../../components';
 import { Container, Image, Paragraph, ProgressBar } from '../../ui';
 import * as styles from './test-page.module.css';
 import BrainImage from '../../assets/images/brain.png';
@@ -48,6 +48,9 @@ export class TestPage extends Container {
       }
       case 'color': {
         return new ColorTest({ test });
+      }
+      case 'button': {
+        return new ButtonTest({ test });
       }
       default: {
         throw new Error('Unknown test type!');
