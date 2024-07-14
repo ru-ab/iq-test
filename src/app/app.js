@@ -10,6 +10,13 @@ export class App extends Component {
 
   async init() {
     this.addRoutes();
+
+    const { pathname } = window.location;
+    if (pathname === '/test') {
+      router.navigate('/test');
+      return;
+    }
+
     router.navigate('/');
   }
 
