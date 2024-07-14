@@ -14,6 +14,7 @@
   justify-items: center;
 
   & .text1 {
+    max-width: 425px;
     color: var(--white);
     font-family: 'PT Serif', serif;
     font-size: 18px;
@@ -23,6 +24,7 @@
   }
 
   & .text2 {
+    max-width: 425px;
     margin-top: 15px;
     padding: 0 20px;
     color: var(--yellow);
@@ -41,6 +43,7 @@
   }
 
   & .text3 {
+    max-width: 425px;
     white-space: pre-line;
     margin-top: 22px;
     color: var(--yellow);
@@ -52,6 +55,7 @@
   }
 
   & .text4 {
+    max-width: 425px;
     color: var(--white);
     font-family: 'PT Serif', serif;
     font-size: 15px;
@@ -85,7 +89,7 @@
   padding-top: 44px;
   padding-bottom: 32px;
   min-height: 228px;
-  background: url('./images/flash.png');
+  background: center url('./images/flash.png');
   display: grid;
   grid-template-columns: 1fr;
 
@@ -96,7 +100,6 @@
   & .text1 {
     margin-top: 13px;
     padding: 0 26px;
-    white-space: pre-line;
     color: var(--white);
     font-family: 'Yeseva One', serif;
     font-size: 18px;
@@ -120,6 +123,8 @@
 }
 
 .white-section {
+  max-width: 425px;
+  justify-self: center;
   padding-top: 37px;
   padding-bottom: 40px;
   display: grid;
@@ -175,6 +180,7 @@
   }
 
   & .text1 {
+    max-width: 425px;
     padding: 0 51px 0 14px;
     color: var(--white);
     font-family: 'Merriweather', serif;
@@ -189,6 +195,7 @@
   }
 
   & .text2 {
+    max-width: 425px;
     color: var(--black);
     background: rgba(243, 243, 242, 0.8);
     margin: 19px 9px;

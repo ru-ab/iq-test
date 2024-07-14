@@ -25,7 +25,7 @@ export class MainPage extends Component {
           new Container({
             children: [
               new Paragraph({
-                text: 'И получите рекомендации \n по развитию своего интеллекта',
+                text: 'И получите рекомендации по развитию своего интеллекта',
                 classNames: [styles.text3],
               }),
               new Paragraph({

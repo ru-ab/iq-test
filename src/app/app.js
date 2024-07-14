@@ -10,7 +10,7 @@ export class App extends Component {
 
   async init() {
     this.addRoutes();
-    router.navigate('/test');
+    router.navigate('/');
   }
 
   addRoutes() {

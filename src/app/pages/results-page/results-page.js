@@ -8,22 +8,22 @@ export class ResultsPage extends Container {
   constructor() {
     super({ classNames: [styles.page] });
 
-    const timer = new Paragraph({
-      html: '<span>10:00</span> МИНУТ',
+    this.timerComponent = new Paragraph({
       classNames: [styles.timer],
     });
 
-    const callResults = new Container({ classNames: [styles.results] });
+    this.callResults = new Container({ classNames: [styles.results] });
 
-    const callButton = new CallButton({
+    this.callButton = new CallButton({
       classNames: [styles.button],
       onClick: async () => {
         try {
-          callButton.setDisabled(true);
+          this.callResults.removeChildren();
+          this.callButton.setDisabled(true);
           const response = await fetch('https://swapi.dev/api/people/1/');
           const data = await response.json();
 
-          callResults.append(
+          this.callResults.append(
             new Paragraph({ text: 'Имя' }),
             new Paragraph({ text: data.name }),
             new Paragraph({ text: 'День рождения' }),
@@ -45,28 +45,16 @@ export class ResultsPage extends Container {
             new Paragraph({ text: 'Дата создания' }),
             new Paragraph({ text: new Date(data.created).toLocaleString('ru-RU') })
           );
+
+          clearInterval(this.intervalId);
         } catch (error) {
-          callButton.setDisabled(false);
-          callResults.append(
+          this.callButton.setDisabled(false);
+          this.callResults.append(
             new Paragraph({ text: error.message, classNames: [styles['results-error']] })
           );
         }
       },
     });
-
-    const end = new Date().setMinutes(new Date().getMinutes() + 10);
-    const intl = new Intl.DateTimeFormat('ru-RU', { minute: 'numeric', second: 'numeric' });
-    const intervalId = setInterval(() => {
-      const delta = end - new Date();
-      if (delta < 0) {
-        timer.setHtml(`<span>00:00</span> МИНУТ`);
-        clearInterval(intervalId);
-        callButton.setDisabled(true);
-        return;
-      }
-      const time = intl.format(delta);
-      timer.setHtml(`<span>${time}</span> МИНУТ`);
-    }, 999);
 
     this.append(
       new Header({
@@ -99,9 +87,9 @@ export class ResultsPage extends Container {
             text: 'Звоните скорее, запись доступна всего',
             classNames: [styles.text5],
           }),
-          timer,
-          callButton,
-          callResults,
+          this.timerComponent,
+          this.callButton,
+          this.callResults,
           new Paragraph({
             classNames: [styles.footer],
             text: 'TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN FOLOSIREA LUI DECLARATI CA AVETI 18 ANI IMPLINITI,',
@@ -109,5 +97,26 @@ export class ResultsPage extends Container {
         ],
       })
     );
+  }
+
+  onEnter() {
+    clearInterval(this.intervalId);
+    this.timerComponent.setHtml('<span>10:00</span> МИНУТ');
+    this.callButton.setDisabled(false);
+    this.callResults.removeChildren();
+
+    const end = new Date().setMinutes(new Date().getMinutes() + 10);
+    const intl = new Intl.DateTimeFormat('ru-RU', { minute: 'numeric', second: 'numeric' });
+    this.intervalId = setInterval(() => {
+      const delta = end - new Date();
+      if (delta < 0) {
+        this.timerComponent.setHtml(`<span>00:00</span> МИНУТ`);
+        clearInterval(this.intervalId);
+        this.callButton.setDisabled(true);
+        return;
+      }
+      const time = intl.format(delta);
+      this.timerComponent.setHtml(`<span>${time}</span> МИНУТ`);
+    }, 999);
   }
 }
