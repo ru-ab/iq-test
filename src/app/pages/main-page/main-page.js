@@ -54,6 +54,24 @@ export class MainPage extends Component {
           new Image({ image: BrainSectionsImage, classNames: [styles['brain-sections']] }),
           new Button({ text: 'пройти тест' }),
         ],
+      }),
+      new Container({
+        classNames: [styles['lightning-section']],
+        children: [
+          new Paragraph({
+            html: 'Прохождение теста займет у вас не более <span>12 минут</span>, а его результаты вы сможете <span>использовать всю жизнь.</span>',
+            classNames: [styles.text1],
+          }),
+          new Paragraph({
+            html: 'Профессиональная интерпретация и детально <strong>проработанные рекомендации</strong> позволят вам качественно <strong>изменить все аспекты своей жизни:</strong> от финансового до любовного.',
+            classNames: [styles.text2],
+          }),
+          new Button({ text: 'пройти тест', classNames: [styles.button] }),
+          new Paragraph({
+            html: '© 2019',
+            classNames: [styles.footer],
+          }),
+        ],
       })
     );
   }

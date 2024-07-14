@@ -143,3 +143,58 @@
     padding: 0 44px;
   }
 }
+
+.lightning-section {
+  padding-top: 56px;
+  background: url('./images/stars-bg.png');
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-content: start;
+  height: 533px;
+
+  & .text1 {
+    padding: 0 51px 0 14px;
+    color: var(--white);
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+
+  & span {
+    color: var(--yellow);
+  }
+
+  & .text2 {
+    color: var(--black);
+    background: rgba(243, 243, 242, 0.8);
+    margin: 19px 9px;
+    padding: 30px 14px 24px;
+    border-radius: 20px;
+    font-family: Merriweather;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    text-align: left;
+  }
+
+  & .button {
+    margin-top: 17px;
+    color: var(--white);
+    background: none;
+    border: 1px solid var(--white);
+  }
+
+  & .footer {
+    margin-top: 55px;
+    align-self: end;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Roboto', serif;
+    font-size: 10px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+}
