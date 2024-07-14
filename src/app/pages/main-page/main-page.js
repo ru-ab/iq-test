@@ -3,7 +3,7 @@ import { Component, Container, Paragraph, Image, Button, Svg } from '../../ui';
 import * as styles from './main-page.module.css';
 import BrainImage from '../../assets/images/brain.png';
 import BrainSectionsImage from './images/brain-sections.png';
-import LightningImage from './images/lightning.png';
+import LightningImage from '../../assets/images/lightning.png';
 import QuotationSvg from './icons/quotation-mark.svg';
 import { router } from '../../router/router';
 

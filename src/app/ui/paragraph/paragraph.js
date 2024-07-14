@@ -10,4 +10,8 @@ export class Paragraph extends Component {
       this.element.innerHTML = html;
     }
   }
+
+  setHtml(html) {
+    this.element.innerHTML = html;
+  }
 }
