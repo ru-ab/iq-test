@@ -10,3 +10,4 @@ export * from './link/link';
 export * from './progress-bar/progress-bar';
 export * from './radio/radio';
 export * from './button-select/button-select';
+export * from './loader/loader';

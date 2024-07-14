@@ -4,3 +4,4 @@ export * from './menu/menu';
 export * from './radio-test/radio-test';
 export * from './color-test/color-test';
 export * from './button-test/button-test';
+export * from './processing/processing';

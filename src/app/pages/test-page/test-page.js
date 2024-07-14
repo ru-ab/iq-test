@@ -1,4 +1,4 @@
-import { ButtonTest, ColorTest, Header, RadioTest } from '../../components';
+import { ButtonTest, ColorTest, Header, RadioTest, Processing } from '../../components';
 import { Container, Image, Paragraph, ProgressBar } from '../../ui';
 import * as styles from './test-page.module.css';
 import BrainImage from '../../assets/images/brain.png';
@@ -32,6 +32,12 @@ export class TestPage extends Container {
 
     testState.on('next', (test) => {
       this.createTest(test);
+    });
+
+    testState.on('finish', () => {
+      this.container.removeChildren();
+      this.container.append(this.progressBar, new Processing());
+      this.progressBar.setValue(1);
     });
   }
 

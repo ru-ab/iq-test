@@ -11,7 +11,12 @@ class TestState {
   nextTest(answer) {
     this.answers.push({ test: this.getCurrentTest(), answer });
     this.currentTest += 1;
-    this.dispatch('next', this.getCurrentTest());
+
+    if (this.currentTest < this.tests.length) {
+      this.dispatch('next', this.getCurrentTest());
+    } else {
+      this.dispatch('finish');
+    }
   }
 
   getCurrentTest() {
