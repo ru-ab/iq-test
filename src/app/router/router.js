@@ -26,6 +26,7 @@ class Router {
     this.cleanRoot();
     window.history.pushState({}, '', route.path);
     this.root.appendChild(route.component.render());
+    route.component.onEnter();
   }
 
   back() {

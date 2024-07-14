@@ -26,7 +26,8 @@
 }
 
 .container {
-  background: url('../../assets/images/stars-bg.png');
+  width: 100%;
+  max-width: 425px;
   height: calc(100vh - 46px);
   display: grid;
   grid-template-rows: auto 1fr;
@@ -34,4 +35,11 @@
 
 .progress-bar {
   margin: 17px 30px;
+  max-width: 365px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background: url('../../assets/images/stars-bg.png');
 }

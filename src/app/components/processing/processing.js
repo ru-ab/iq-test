@@ -1,5 +1,6 @@
 import { Container, Loader, Paragraph } from '../../ui';
 import * as styles from './processing.module.css';
+import { router } from '../../router/router';
 
 export class Processing extends Container {
   constructor() {
@@ -13,5 +14,9 @@ export class Processing extends Container {
         classNames: [styles['small-text']],
       })
     );
+
+    setTimeout(() => {
+      router.navigate('/results');
+    }, 5000);
   }
 }

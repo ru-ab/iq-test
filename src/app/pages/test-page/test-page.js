@@ -25,10 +25,8 @@ export class TestPage extends Container {
           }),
         ],
       }),
-      this.container
+      new Container({ classNames: [styles.wrapper], children: [this.container] })
     );
-
-    this.createTest(testState.getCurrentTest());
 
     testState.on('next', (test) => {
       this.createTest(test);
@@ -62,5 +60,10 @@ export class TestPage extends Container {
         throw new Error('Unknown test type!');
       }
     }
+  }
+
+  onEnter() {
+    testState.reset();
+    this.createTest(testState.getCurrentTest());
   }
 }

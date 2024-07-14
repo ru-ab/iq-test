@@ -8,6 +8,11 @@ class TestState {
     this.currentTest = 0;
   }
 
+  reset() {
+    this.answers = [];
+    this.currentTest = 0;
+  }
+
   nextTest(answer) {
     this.answers.push({ test: this.getCurrentTest(), answer });
     this.currentTest += 1;

@@ -37,4 +37,6 @@ export class Component {
   removeClassName(className) {
     this.element.classList.remove(className);
   }
+
+  onEnter() {}
 }

@@ -1,4 +1,5 @@
 .label {
+  cursor: pointer;
   position: relative;
   padding: 15px 15px 15px 35px;
   background: rgba(242, 243, 243, 0.15);

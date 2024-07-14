@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   align-content: stretch;
+  max-width: 425px;
 }
 
 .question {
