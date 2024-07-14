@@ -8,7 +8,7 @@
   padding-bottom: 12px;
   height: calc(100vh - 46px);
   min-height: 522px;
-  background: url('./images/stars-bg.png');
+  background: url('../../assets/images/stars-bg.png');
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -150,7 +150,7 @@
   max-width: 100vw;
   padding-top: 56px;
   padding-bottom: 7px;
-  background: url('./images/stars-bg.png');
+  background: url('../../assets/images/stars-bg.png');
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;

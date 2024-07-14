@@ -1,0 +1,46 @@
+import { tests } from './tests';
+
+class TestState {
+  constructor() {
+    this.observers = {};
+    this.tests = tests;
+    this.answers = [];
+    this.currentTest = 0;
+  }
+
+  nextTest(answer) {
+    this.answers.push({ test: this.getCurrentTest(), answer });
+    this.currentTest += 1;
+    this.dispatch('next', this.getCurrentTest());
+  }
+
+  getCurrentTest() {
+    return this.tests[this.currentTest];
+  }
+
+  getCurrentTestIndex() {
+    return this.currentTest;
+  }
+
+  getTestsCount() {
+    return this.tests.length;
+  }
+
+  on(eventType, fn) {
+    if (!this.observers[eventType]) {
+      this.observers[eventType] = [];
+    }
+
+    this.observers[eventType].push(fn);
+  }
+
+  dispatch(eventType, data) {
+    if (!this.observers[eventType]) {
+      return;
+    }
+
+    this.observers[eventType].forEach((fn) => fn(data));
+  }
+}
+
+export const testState = new TestState();

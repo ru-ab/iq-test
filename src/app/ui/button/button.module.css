@@ -5,11 +5,17 @@
   border-radius: 20px;
   border: none;
   background: var(--yellow);
-  color: var(--black-text);
+  color: #0d0c11;
   font-family: 'Merriweather', serif;
   font-size: 14px;
   line-height: 17.6px;
   letter-spacing: 0.1em;
   text-align: center;
   text-transform: uppercase;
+
+  &:disabled {
+    color: #8e8e8e;
+    background: #dadada;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25) inset;
+  }
 }

@@ -1,0 +1,30 @@
+.radio-test {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: stretch;
+}
+
+.question {
+  white-space: pre-line;
+  margin-bottom: 36px;
+  align-self: flex-end;
+  color: var(--white);
+  font-family: 'PT Serif', serif;
+  font-size: 20px;
+  line-height: 26.5px;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  align-content: start;
+}
+
+.button {
+  justify-self: center;
+  align-self: flex-end;
+  margin-bottom: 25px;
+}
