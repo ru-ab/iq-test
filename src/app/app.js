@@ -1,5 +1,5 @@
 import { router } from './router/router';
-import { MainPage } from './pages';
+import { MainPage, TestPage } from './pages';
 import { Component } from './ui';
 import './app.css';
 
@@ -10,11 +10,12 @@ export class App extends Component {
 
   async init() {
     this.addRoutes();
-    router.navigate('/');
+    router.navigate('/test');
   }
 
   addRoutes() {
     router.setDefaultRoute('/');
     router.addRoute('/', new MainPage());
+    router.addRoute('/test', new TestPage());
   }
 }

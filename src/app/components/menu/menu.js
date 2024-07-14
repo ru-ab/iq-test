@@ -39,6 +39,8 @@ export class Menu extends Container {
           classNames: [styles.link, styles.yellow],
           onClick: (event) => {
             event.preventDefault();
+            router.navigate('/test');
+            this.close();
           },
           children: ['пройти тест'],
         }),

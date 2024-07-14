@@ -1,0 +1,25 @@
+.page {
+}
+
+.title {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.brain {
+  width: 48px;
+  height: 48px;
+}
+
+.text {
+  padding: 20px 36px 11px 6px;
+  color: var(--yellow);
+  display: inline-block;
+  font-family: 'Yeseva One', serif;
+  font-size: 12px;
+  line-height: 13.86px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-transform: uppercase;
+}

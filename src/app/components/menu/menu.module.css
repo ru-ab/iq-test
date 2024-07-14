@@ -1,5 +1,8 @@
 .menu {
   position: fixed;
+  display: grid;
+  justify-items: center;
+  align-content: start;
   top: 0;
   right: 0;
   left: 0;
@@ -20,8 +23,8 @@
 }
 
 .menu-list {
+  width: 280px;
   margin-top: 110px;
-  padding-left: 23px;
   display: grid;
   gap: 24px;
 }

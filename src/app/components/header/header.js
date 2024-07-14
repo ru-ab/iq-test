@@ -4,12 +4,16 @@ import * as styles from './header.module.css';
 import MenuIcon from './icons/menu.svg';
 
 export class Header extends Component {
-  constructor() {
+  constructor({ children = [] }) {
     super({ tagName: 'header', classNames: [styles.header] });
 
     const menu = new Menu();
 
-    const menuButton = new ButtonIcon({ svg: MenuIcon, onClick: () => menu.open() });
-    this.append(menuButton, menu);
+    const menuButton = new ButtonIcon({
+      svg: MenuIcon,
+      classNames: [styles.button],
+      onClick: () => menu.open(),
+    });
+    this.append(menuButton, menu, ...children);
   }
 }

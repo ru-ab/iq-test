@@ -1,5 +1,11 @@
 .header {
   height: 46px;
-  padding: 10px;
   background: var(--black);
+  display: flex;
+}
+
+.button {
+  margin: 12px;
+  width: 28px;
+  height: 28px;
 }
