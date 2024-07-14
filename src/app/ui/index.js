@@ -5,3 +5,5 @@ export * from './image/image';
 export * from './container/container';
 export * from './paragraph/paragraph';
 export * from './button/button';
+export * from './list/list';
+export * from './link/link';

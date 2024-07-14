@@ -1,0 +1,46 @@
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--black);
+  z-index: 5;
+  overflow: hidden;
+  transition: all 0.3s;
+  opacity: 1;
+}
+
+.button {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 18px;
+  right: 13px;
+}
+
+.menu-list {
+  margin-top: 110px;
+  padding-left: 23px;
+  display: grid;
+  gap: 24px;
+}
+
+.link {
+  color: var(--white);
+  font-family: 'Roboto', serif;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.hidden {
+  transform: translateX(100vw);
+  opacity: 0;
+}

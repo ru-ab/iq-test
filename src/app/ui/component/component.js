@@ -9,7 +9,11 @@ export class Component {
   }
 
   append(...components) {
-    components.forEach((component) => this.element.appendChild(component.render()));
+    components.forEach((component) =>
+      this.element.appendChild(
+        typeof component === 'string' ? document.createTextNode(component) : component.render()
+      )
+    );
   }
 
   removeChildren() {
