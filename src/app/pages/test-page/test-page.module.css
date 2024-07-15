@@ -28,7 +28,7 @@
 .container {
   width: 100%;
   max-width: 425px;
-  height: calc(100vh - 46px);
+  height: calc(100dvh - 46px);
   display: grid;
   grid-template-rows: auto 1fr;
 }
